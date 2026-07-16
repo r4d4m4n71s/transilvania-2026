@@ -39,7 +39,7 @@
   .ruta h2{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;text-align:center;color:var(--ambar-suave);margin-bottom:18px}
   .track{display:flex;justify-content:space-between;align-items:flex-start;position:relative;max-width:560px;margin:0 auto}
   .track::before{content:"";position:absolute;top:9px;left:6%;right:6%;height:3px;background:repeating-linear-gradient(90deg,var(--ambar) 0 10px,transparent 10px 16px)}
-  .stop{position:relative;z-index:1;text-align:center;width:25%}
+  .stop{position:relative;z-index:1;text-align:center;width:32%}
   .stop .dot{width:20px;height:20px;border-radius:50%;background:var(--ambar);border:3px solid var(--pino);box-shadow:0 0 0 2px var(--ambar);margin:0 auto 8px}
   .stop b{display:block;font-size:14px;line-height:1.2}
   .stop span{font-size:12px;color:#C8D4C6}
@@ -96,9 +96,9 @@
   .caja.tu li::before{content:"→"}
 
   /* ---------- TABLA PRESUPUESTO ---------- */
-  table{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--blanco);border-radius:10px;overflow:hidden;box-shadow:0 3px 14px rgba(36,31,26,.08)}
-  th{background:var(--pino);color:var(--blanco);text-align:left;padding:10px 10px;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
-  td{padding:9px 10px;border-bottom:1px solid #EFE8D8;vertical-align:top}
+  table{width:100%;border-collapse:collapse;font-size:12.5px;background:var(--blanco);border-radius:10px;overflow:hidden;box-shadow:0 3px 14px rgba(36,31,26,.08)}
+  th{background:var(--pino);color:var(--blanco);text-align:left;padding:9px 6px;font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+  td{padding:8px 6px;border-bottom:1px solid #EFE8D8;vertical-align:top}
   tr.sub td{font-weight:800;background:#F1EADA}
   tr.total td{font-weight:800;background:var(--ambar-suave);font-size:15.5px}
   .pago-lock{color:var(--teja);font-weight:700;white-space:nowrap}
@@ -110,7 +110,9 @@
   .hoteles .ciudad{margin-bottom:16px}
   .hoteles .ciudad h3{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:700;color:var(--pino)}
   .hoteles .ciudad p.meta{font-size:13px;color:#7d7362;margin-bottom:6px}
-  .hotel-item{background:var(--blanco);border:1px solid #E7DFCE;border-radius:8px;padding:10px 12px;margin:6px 0;font-size:15px;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+  .hotel-item{background:var(--blanco);border:1px solid #E7DFCE;border-radius:8px;padding:10px 12px;margin:6px 0;font-size:15px;display:flex;justify-content:space-between;gap:10px;align-items:baseline;text-decoration:none;color:inherit}
+  .hotel-item:active{background:#F1EADA}
+  .hotel-item .rango::after{content:" ↗";color:var(--ambar);font-weight:800}
   .hotel-item .rango{font-size:13.5px;color:var(--musgo);font-weight:700;white-space:nowrap}
 
   /* ---------- CTA ---------- */
@@ -142,10 +144,10 @@
   <h2>La ruta</h2>
   <div class="track">
     <div class="stop"><div class="dot"></div><b>Bucarest</b><span>Jue 17</span></div>
-    <div class="stop"><div class="dot"></div><b>Sinaia</b><span>Vie 18</span></div>
-    <div class="stop"><div class="dot"></div><b>Brașov</b><span>Sáb 19–Dom 20</span></div>
+    <div class="stop"><div class="dot"></div><b>Brașov</b><span>Vie 18 – Lun 21</span></div>
     <div class="stop"><div class="dot"></div><b>Cluj</b><span>Lun 21</span></div>
   </div>
+  <p style="text-align:center;font-size:13.5px;color:#C8D4C6;margin-top:14px">Dos hoteles en todo el recorrido · Peleș se visita en excursión de día desde Brașov</p>
 </div>
 
 <!-- ======================= DÍAS ======================= -->
@@ -164,8 +166,13 @@
       <div class="principal">
         <div class="tag">★ Actividad principal</div>
         <div class="que">Palacio del Parlamento — visita guiada</div>
-        <div class="hora">🕐 ~16:00 · ~1h30</div>
-        <div class="nota">Reserva anticipada obligatoria con pasaporte (la hace el coordinador). Se paga en taquilla el día.</div>
+        <div class="hora">🕐 ~15:00 · ~1h30</div>
+        <div class="nota">El edificio administrativo más pesado del mundo. Reserva anticipada obligatoria con pasaporte (la hace el coordinador). Se paga en taquilla el día.</div>
+      </div>
+
+      <div class="principal" style="background:#EAE7F3;border-left-color:#5B4B8A">
+        <div class="tag" style="color:#4A3C73">🌙 En la noche</div>
+        <div class="que">Recorrido Lipscani, comida, bienvenida grupo</div>
       </div>
 
       <div class="opc">
@@ -174,7 +181,7 @@
         <div class="grupo"><b>Calea Victoriei:</b> Ateneo Rumano · Palacio CEC · Museo Nacional de Arte</div>
         <div class="grupo"><b>Verde y relax:</b> Parque Cișmigiu o Herăstrău</div>
       </div>
-      <div class="precio-dia">Entrada Parlamento: ~10–15 € p/p <em>estimado</em></div>
+      <div class="precio-dia">Entrada Parlamento: ~10–15 € / 52–79 RON p/p <em>estimado</em></div>
     </div>
   </article>
 
@@ -182,61 +189,21 @@
   <article class="card">
     <div class="foto">
       <span class="chip">Viernes 18 sep</span>
-      <img src="https://onesmallbag.com/wp-content/uploads/2026/01/Sinaia-monastery-1-1024x1024.jpg" alt="Monasterio de Sinaia">
-    </div>
-    <div class="cuerpo">
-      <h3>Sinaia · Castillo de Peleș</h3>
-      <div class="sub">La «perla de los Cárpatos» y el castillo más bello de Rumania</div>
-
-      <div class="tren">
-        <div class="tag">🚆 Tren Bucarest → Sinaia</div>
-        <div class="linea">
-          <div><b>~08:00</b><span>Salida · Gara de Nord</span></div>
-          <div style="opacity:.6">➔</div>
-          <div><b>~09:50</b><span>Llegada · Sinaia</span></div>
-        </div>
-        <div class="encuentro">📍 Encuentro en la estación: <b>~07:20</b> — puntualidad estricta</div>
-        <div class="extra">1.ª clase CFR · ~12 € p/p · asientos del grupo ya reservados</div>
-      </div>
-
-      <div class="principal">
-        <div class="tag">★ Actividad principal</div>
-        <div class="que">Castillo de Peleș — visita</div>
-        <div class="hora">🕐 ~12:00</div>
-        <div class="nota">Residencia de verano de los reyes de Rumania. Abre viernes ✓. Entrada en taquilla: ~15–20 € p/p.</div>
-      </div>
-
-      <div class="opc">
-        <h4>Opcionales · caminando en Sinaia</h4>
-        <div class="grupo"><b>Junto a Peleș:</b> Castillo Pelișor (entrada aparte)</div>
-        <div class="grupo"><b>Pueblo:</b> Monasterio de Sinaia · antiguo Casino y Parque Dimitrie Ghica</div>
-        <div class="grupo"><b>Montaña:</b> telecabina a Bucegi (si el clima acompaña)</div>
-      </div>
-      <img style="border-radius:8px;margin-top:12px" src="https://www.brasov.net/wp-content/uploads/2023/01/telecabina-sinaia-1.jpg" alt="Telecabina de Sinaia">
-      <p style="font-size:13px;color:#7d7362;margin:6px 0 0">Opcional: telecabina de Sinaia hacia las montañas Bucegi.</p>
-      <div class="precio-dia">Tren ~12 € + Peleș ~15–20 € p/p <em>estimado</em></div>
-    </div>
-  </article>
-
-  <!-- DÍA 19 -->
-  <article class="card">
-    <div class="foto">
-      <span class="chip">Sábado 19 sep</span>
-      <img src="https://onesmallbag.com/wp-content/uploads/2026/01/fountain-in-the-central-square-in-Brasov-with-the-white-tower-in-the-background-1024x576.jpg" alt="Piața Sfatului, Brașov">
+      <img src="https://transylvanianinn.ro/wp-content/uploads/2024/05/a01a3c3ae8aa37b7283d-1024x682.jpg" alt="Brașov medieval">
     </div>
     <div class="cuerpo">
       <h3>Brașov medieval</h3>
       <div class="sub">Murallas sajonas al pie del monte Tâmpa</div>
 
       <div class="tren">
-        <div class="tag">🚆 Tren Sinaia → Brașov · el tramo más escénico</div>
+        <div class="tag">🚆 Tren directo Bucarest → Brașov · ~2h45</div>
         <div class="linea">
-          <div><b>~11:00</b><span>Salida · Sinaia</span></div>
+          <div><b>~08:30</b><span>Salida · Gara de Nord</span></div>
           <div style="opacity:.6">➔</div>
-          <div><b>~12:00</b><span>Llegada · Brașov</span></div>
+          <div><b>~11:15</b><span>Llegada · Brașov</span></div>
         </div>
-        <div class="encuentro">📍 Encuentro en la estación: <b>~10:30</b></div>
-        <div class="extra">Valle de Prahova pegado al macizo de Bucegi · Cruz del Caraiman visible en Bușteni · Predeal, la estación más alta del país · ~5 € p/p</div>
+        <div class="encuentro">📍 Encuentro en la estación: <b>~07:50</b> · Salida puntual</div>
+        <div class="extra">1.ª clase CFR · asientos del grupo reservados en bloque. Por la ventana: el valle de Prahova, la Cruz del Caraiman sobre Bușteni y Predeal, la estación más alta de Rumania.</div>
       </div>
 
       <div class="principal">
@@ -251,8 +218,49 @@
         <div class="grupo"><b>Murallas:</b> Bastión de los Tejedores · Puerta Ecaterina · Primera Escuela Rumana</div>
         <div class="grupo"><b>Vistas:</b> teleférico al monte Tâmpa (letrero BRAȘOV)</div>
         <div class="grupo"><b>Paseo:</b> Strada Republicii, peatonal y llena de cafés</div>
+        <div class="grupo"><b>Noche:</b> la noche brașoveana 🍻 — cervecerías y terrazas del casco</div>
       </div>
-      <div class="precio-dia">Tren ~5 € p/p <em>estimado</em></div>
+      <div class="precio-dia">Tren: ~15–20 € / 79–105 RON p/p <em>estimado</em></div>
+    </div>
+  </article>
+
+  <!-- DÍA 19 -->
+  <article class="card">
+    <div class="foto">
+      <span class="chip">Sábado 19 sep</span>
+      <img src="https://onesmallbag.com/wp-content/uploads/2025/10/peles-castle-sinaia-romania-scaled.jpg" alt="Castillo de Peleș">
+    </div>
+    <div class="cuerpo">
+      <h3>Peleș · excursión a Sinaia</h3>
+      <div class="sub">El castillo más bello de Rumania — ida y vuelta en el día</div>
+
+      <div class="tren">
+        <div class="tag">🚆 Brașov → Sinaia · ~1h · el tramo más escénico</div>
+        <div class="linea">
+          <div><b>~08:30</b><span>Salida · Brașov</span></div>
+          <div style="opacity:.6">➔</div>
+          <div><b>~09:30</b><span>Llegada · Sinaia</span></div>
+        </div>
+        <div class="encuentro">📍 Encuentro en la estación: <b>~08:00</b></div>
+        <div class="extra">🎒 <b>Sin maletas:</b> se sale y se vuelve a Brașov el mismo día. Regreso ~15:30–16:30.</div>
+      </div>
+
+      <div class="principal">
+        <div class="tag">★ Actividad principal</div>
+        <div class="que">Castillo de Peleș</div>
+        <div class="hora">🕐 ~10:30</div>
+        <div class="nota">Residencia de verano de los reyes de Rumania: 160 habitaciones, maderas talladas y vitrales. Abre sábados ✓. Entrada en taquilla.</div>
+      </div>
+
+      <div class="opc">
+        <h4>Opcionales · caminando en Sinaia</h4>
+        <div class="grupo"><b>Junto a Peleș:</b> Castillo Pelișor (entrada aparte)</div>
+        <div class="grupo"><b>Pueblo:</b> Monasterio de Sinaia · antiguo Casino y Parque Dimitrie Ghica</div>
+        <div class="grupo"><b>Montaña:</b> telecabina a Bucegi (si el clima acompaña)</div>
+      </div>
+      <img style="border-radius:8px;margin-top:12px" src="https://www.brasov.net/wp-content/uploads/2023/01/telecabina-sinaia-1.jpg" alt="Telecabina de Sinaia">
+      <p style="font-size:13px;color:#7d7362;margin:6px 0 0">Opcional: telecabina de Sinaia hacia las montañas Bucegi.</p>
+      <div class="precio-dia">Tren ida y vuelta ~10 € / 52 RON + Peleș ~15–20 € / 79–105 RON p/p <em>estimado</em></div>
     </div>
   </article>
 
@@ -274,19 +282,19 @@
         <div class="tag">★ Ancla del día</div>
         <div class="que">Santuario de osos Libearty (Zărnești)</div>
         <div class="hora">🕐 ~09:00 · primer turno · ~1h</div>
-        <div class="nota">El santuario de osos pardos más grande del mundo: +100 osos rescatados en 69 hectáreas de bosque. Tour guiado en inglés (quien necesite, usa app de traducción). Entradas ya pagadas con horario fijo — la puntualidad es crítica.</div>
+        <div class="nota">El santuario de osos pardos más grande del mundo: +100 osos rescatados en 69 hectáreas de bosque. Tour guiado en inglés (quien necesite, usa app de traducción). Salida puntual.</div>
       </div>
 
       <div class="opc">
         <h4>Plan del día</h4>
         <div class="grupo"><b>~08:15</b> — Salida en minibús desde Brașov (~40 min)</div>
         <div class="grupo"><b>~09:00</b> — Tour de osos Libearty</div>
-        <div class="grupo"><b>~10:30</b> — Castillo de Bran, «el de Drácula» (~18 € p/p)</div>
+        <div class="grupo"><b>~10:30</b> — Castillo de Bran, «el de Drácula»</div>
         <div class="grupo"><b>~13:00</b> — Almuerzo cerca de Bran</div>
-        <div class="grupo"><b>~14:30</b> — Fortaleza de Râșnov (de paso, ~7–10 € p/p)</div>
-        <div class="grupo"><b>Tarde</b> — Regreso a Brașov · Oktoberfest opcional 🍺</div>
+        <div class="grupo"><b>~14:30</b> — Fortaleza de Râșnov (de paso)</div>
+        <div class="grupo"><b>Tarde</b> — Regreso a Brașov</div>
       </div>
-      <div class="precio-dia">Osos ~17–20 € + Bran ~18 € + Râșnov ~7–10 € + minibús ~25–35 € p/p <em>estimado</em></div>
+      <div class="precio-dia">Osos ~17–20 € / 89–105 RON + Bran ~18 € / 94 RON + Râșnov ~7–10 € / 37–52 RON + minibús ~25–35 € / 131–183 RON p/p <em>estimado</em></div>
     </div>
   </article>
 
@@ -294,40 +302,51 @@
   <article class="card">
     <div class="foto">
       <span class="chip">Lunes 21 sep</span>
-      <img src="https://paliparan.com/wp-content/uploads/2023/08/rail-romania.jpg" alt="Vía del tren entre Sinaia y Brașov, Cárpatos">
+      <img src="https://paliparan.com/wp-content/uploads/2023/08/rail-romania.jpg" alt="Vía del tren por los Cárpatos">
     </div>
     <div class="cuerpo">
       <h3>Tren a Cluj-Napoca</h3>
-      <div class="sub">Travesía por el corazón de Transilvania</div>
+      <div class="sub">Travesía por el corazón de Transilvania, con parada para almorzar</div>
 
       <div class="tren">
-        <div class="tag">🚆 Tren directo Brașov → Cluj · ~6h30</div>
+        <div class="tag">🚆 Brașov → Sighișoara · ~2h15</div>
         <div class="linea">
           <div><b>~08:30</b><span>Salida · Brașov</span></div>
           <div style="opacity:.6">➔</div>
-          <div><b>~15:00</b><span>Llegada · Cluj</span></div>
+          <div><b>~10:45</b><span>Llegada · Sighișoara</span></div>
         </div>
         <div class="encuentro">📍 Encuentro en la estación: <b>~07:50</b></div>
-        <div class="extra">⚠️ Este tren normalmente NO lleva vagón bar: <b>comprar provisiones antes de abordar</b> (tiendas en la estación). Por la ventana: fortaleza de Rupea, la silueta de la ciudadela de Sighișoara, viñedos del valle del Târnava.</div>
+        <div class="extra">Por la ventana: colinas, pueblos sajones e iglesias fortificadas — y la fortaleza de Rupea en su peñón. Conviene llevar algo de picar y agua: el tren no lleva vagón bar.</div>
+      </div>
+
+      <div class="principal">
+        <div class="tag">★ Parada del día</div>
+        <div class="que">Almuerzo en Sighișoara</div>
+        <div class="hora">🕐 ~11:30</div>
+        <div class="nota">Maletas en la consigna de la estación y ~15 minutos a pie, en plano, hasta el pueblo bajo. Almuerzo tranquilo con la ciudadela medieval a la vista — cuna de Vlad Țepeș y patrimonio UNESCO. Plato recomendado: <i>sarmale</i> con <i>mămăligă</i> (rollos de repollo rellenos, polenta y crema agria), el clásico rumano por excelencia.</div>
       </div>
 
       <div class="foto-doble">
-        <div><img src="https://paliparan.com/wp-content/uploads/2021/11/rupea-5.jpg" alt="Fortaleza de Rupea"></div>
-        <div><img src="https://castlequestchronicles.com/wp-content/uploads/2026/03/Sighisoara-Citadel-21-Featured.jpg" alt="Ciudadela de Sighișoara"></div>
+        <div><img src="https://onesmallbag.com/wp-content/uploads/2025/12/view-of-clock-tower-and-vlads-house-in-yellow-Sighisoara-1024x576.jpg" alt="Torre del Reloj y casa de Vlad, Sighișoara"></div>
+        <div><img src="https://onesmallbag.com/wp-content/uploads/2026/03/Romanian-food-at-Ceasu-Rau-Sarmale-with-mamaliga-polenta-a-green-pepper-and-a-pot-of-sour-cream-smantana-1024x576.jpg" alt="Sarmale con mămăligă"></div>
       </div>
-      <p style="font-size:13px;color:#7d7362;margin:6px 0 4px">Vistas desde la ventana: la fortaleza de Rupea y la ciudadela de Sighișoara.</p>
+      <p style="font-size:13px;color:#7d7362;margin:6px 0 4px">La torre del Reloj y la casa de Vlad · <i>sarmale</i> con <i>mămăligă</i>, el plato clásico rumano.</p>
 
-      <div class="principal">
-        <div class="tag">★ Actividad principal</div>
-        <div class="que">Primer paseo por el centro de Cluj</div>
-        <div class="hora">🕐 Tarde, al llegar</div>
+      <div class="tren">
+        <div class="tag">🚆 Sighișoara → Cluj · ~4h</div>
+        <div class="linea">
+          <div><b>~14:00</b><span>Salida · Sighișoara</span></div>
+          <div style="opacity:.6">➔</div>
+          <div><b>~18:00</b><span>Llegada · Cluj</span></div>
+        </div>
+        <div class="extra">Viñedos del valle del Târnava y la entrada a Cluj entre colinas.</div>
       </div>
 
       <div class="opc">
-        <h4>Opcionales · centro caminable</h4>
+        <h4>Al llegar · centro caminable</h4>
         <div class="grupo">Piața Unirii · Iglesia de San Miguel · estatua de Matías Corvino · Palacio Banffy · Museo de la Farmacia</div>
       </div>
-      <div class="precio-dia">Tren ~22 € p/p <em>estimado</em></div>
+      <div class="precio-dia">Tren: ~22 € / 115 RON p/p <em>estimado</em></div>
     </div>
   </article>
 </main>
@@ -336,7 +355,7 @@
 <section class="bloque verde" style="max-width:none">
   <div class="wrap">
     <h2>Así viajamos: 1.ª clase CFR</h2>
-    <p style="margin-bottom:14px">Tres tramos en tren por los Cárpatos y Transilvania, en primera clase (asientos amplios 2+1 o compartimentos, con enchufes). Los asientos del grupo se reservan en bloque para ir todos juntos.</p>
+    <p style="margin-bottom:14px">Cuatro trayectos en tren por los Cárpatos y Transilvania, en primera clase (asientos amplios, con enchufes). Los asientos del grupo se reservan en bloque para ir todos juntos.</p>
     <img style="border-radius:10px" src="https://hotnews.ro/wp-content/uploads/2025/11/Interiorul-unui-vagon-modernizat.jpg" alt="Interior de vagón de 1.ª clase de CFR">
     <p style="font-size:13px;color:#C8D4C6;margin-top:6px">Interior de un vagón de 1.ª clase modernizado de CFR.</p>
     <img style="border-radius:10px;margin-top:14px" src="https://hotnews.ro/wp-content/uploads/2025/11/Tren-modernizat-prin-PNRR.jpg" alt="Tren de CFR Călători">
@@ -359,7 +378,7 @@
     <div class="caja tu">
       <h3>🧳 Lo resuelve cada persona</h3>
       <ul>
-        <li><b>Su hotel</b> en cada ciudad — elige entre las opciones sugeridas abajo (o el que prefieras). Reserva en <b>tarifa reembolsable</b> y pronto: Sinaia se llena primero</li>
+        <li><b>Su hotel</b> en Bucarest y Brașov — abajo están las opciones sugeridas (o el que prefieras). Reserva en <b>tarifa reembolsable</b> y pronto</li>
         <li><b>Llenar el formulario de datos</b> antes de la fecha límite (se puede ir completando por partes)</li>
         <li>Sus comidas, taxis y gastos personales</li>
       </ul>
@@ -370,29 +389,26 @@
 <!-- ======================= HOTELES ======================= -->
 <section class="bloque hoteles" style="padding-top:0">
   <h2>Hoteles sugeridos</h2>
-  <p style="margin-bottom:16px;font-size:15.5px">No es obligatorio quedarnos todos en el mismo hotel: los <b>puntos de encuentro</b> (estaciones y actividades, con hora) mantienen al grupo unido. Estas opciones quedan a pocos metros unas de otras. <span style="color:#7d7362;font-size:13.5px">Precios por habitación doble/noche, estimados.</span></p>
+  <p style="margin-bottom:6px;font-size:15.5px">Solo hay <b>dos hoteles en todo el recorrido</b>: una noche en Bucarest y tres en Brașov. No es obligatorio que todos estemos en el mismo: los <b>puntos de encuentro</b> (estaciones y actividades, con hora) mantienen al grupo unido.</p>
+  <p style="margin-bottom:14px;font-size:14.5px;color:var(--teja);font-weight:700">Ese fin de semana Brașov tiene mucha demanda: conviene reservar pronto, en tarifa reembolsable.</p>
+  <p style="margin:-8px 0 14px;font-size:14px;color:var(--musgo);font-weight:700">👆 Toca un hotel para abrirlo en Booking con las fechas del viaje ya cargadas.</p>
 
     <div class="ciudad">
-      <h3>Bucarest · 1 noche</h3>
-      <div class="hotel-item"><span><b>Novotel City Centre</b> ⭐ <em style="font-style:normal;font-size:12px;background:#F3E3BF;border-radius:4px;padding:1px 6px">sugerido</em> 4★ · grande, sobre Calea Victoriei</span><span class="rango">€110–140</span></div>
-      <div class="hotel-item"><span><b>Rembrandt Old Town</b> 3★ · en pleno Lipscani</span><span class="rango">€80–110</span></div>
-      <div class="hotel-item"><span><b>Old Town Boutique</b> 3★ · céntrico, con encanto</span><span class="rango">€95–125</span></div>
+      <h3>Bucarest · 1 noche (17→18 sep)</h3>
+      <p class="meta">Precio de la noche, habitación doble · estimado</p>
+      <a class="hotel-item" href="https://www.booking.com/hotel/ro/goldentulipbucharest.html?checkin=2026-09-17&amp;checkout=2026-09-18&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener"><span><b>Leonardo Hotel City Center</b> ⭐ <em style="font-style:normal;font-size:12px;background:#F3E3BF;border-radius:4px;padding:1px 6px">sugerido</em> 4★ · Calea Victoriei</span><span class="rango">€125 · 655 RON</span></a>
+      <a class="hotel-item" href="https://www.booking.com/hotel/ro/rembrandt.html?checkin=2026-09-17&amp;checkout=2026-09-18&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener"><span><b>Rembrandt Old Town</b> 3★ · en pleno Lipscani</span><span class="rango">€96–134 · 505–700 RON</span></a>
+      <a class="hotel-item" href="https://www.booking.com/hotel/ro/la-fattoria-amp-restaurant.html?checkin=2026-09-17&amp;checkout=2026-09-18&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener"><span><b>Old Town Boutique</b> 3★ · céntrico, con encanto</span><span class="rango">€115–150 · 600–785 RON</span></a>
+      <a class="hotel-item" href="https://www.booking.com/hotel/ro/mercure-bucharest-city-center.html?checkin=2026-09-17&amp;checkout=2026-09-18&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener"><span><b>Mercure City Center</b> 4★ · junto al Ateneo</span><span class="rango">€139–170 · 730–890 RON</span></a>
     </div>
 
     <div class="ciudad">
-      <h3>Sinaia · 1 noche</h3>
-      <p class="meta">Hotel Sinaia y Caraiman están a 210 m entre sí, al lado de la estación ✓</p>
-      <div class="hotel-item"><span><b>Hotel Sinaia (Rina)</b> ⭐ <em style="font-style:normal;font-size:12px;background:#F3E3BF;border-radius:4px;padding:1px 6px">sugerido</em> 4★ · grande, spa y piscina</span><span class="rango">€90–130</span></div>
-      <div class="hotel-item"><span><b>Hotel Caraiman</b> 3★ · a 99 m de la estación</span><span class="rango">€65–90</span></div>
-      <div class="hotel-item"><span><b>Ioana Boutique</b> 4★ · cerca de Peleș</span><span class="rango">€70–110</span></div>
-    </div>
-
-    <div class="ciudad">
-      <h3>Brașov · 2 noches</h3>
-      <p class="meta">Los tres, contiguos en el casco medieval ✓</p>
-      <div class="hotel-item"><span><b>Aro Palace</b> ⭐ <em style="font-style:normal;font-size:12px;background:#F3E3BF;border-radius:4px;padding:1px 6px">sugerido</em> 5★ · histórico, spa y piscina</span><span class="rango">€130–170</span></div>
-      <div class="hotel-item"><span><b>Casa Wagner</b> 3★ · sobre la Piața Sfatului</span><span class="rango">€75–105</span></div>
-      <div class="hotel-item"><span><b>Bella Muzica</b> 3★ · sobre la Piața Sfatului</span><span class="rango">€70–100</span></div>
+      <h3>Brașov · 3 noches (18→21 sep)</h3>
+      <p class="meta">Precio de las 3 noches, habitación doble · estimado</p>
+      <a class="hotel-item" href="https://www.booking.com/hotel/ro/kolping.html?checkin=2026-09-18&amp;checkout=2026-09-21&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener"><span><b>Hotel Kolping</b> ⭐ <em style="font-style:normal;font-size:12px;background:#F3E3BF;border-radius:4px;padding:1px 6px">sugerido</em> 3★ · desayuno bufé incluido</span><span class="rango">€255 · 1.335 RON</span></a>
+      <a class="hotel-item" href="https://www.booking.com/hotel/ro/safrano-bed-amp-breakfast.html?checkin=2026-09-18&amp;checkout=2026-09-21&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener"><span><b>Safrano Palace</b> 3★ · en la Piața Sfatului</span><span class="rango">€265 · 1.390 RON</span></a>
+      <a class="hotel-item" href="https://www.booking.com/hotel/ro/aro-palace.html?checkin=2026-09-18&amp;checkout=2026-09-21&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener"><span><b>Aro Palace</b> 5★ · spa y piscina</span><span class="rango">€405 · 2.120 RON</span></a>
+      <a class="hotel-item" href="https://www.booking.com/hotel/ro/radisson-blu-aurum-brasov.html?checkin=2026-09-18&amp;checkout=2026-09-21&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener"><span><b>Radisson Blu Aurum</b> 5★ · piscina en la azotea</span><span class="rango">€525 · 2.750 RON</span></a>
     </div>
 </section>
 
@@ -400,27 +416,26 @@
 <section class="bloque" style="padding-top:0">
   <h2>💰 Presupuesto estimado por persona</h2>
   <table>
-    <tr><th>Concepto</th><th>Estimado</th><th>Pago</th></tr>
-    <tr><td>Tren Bucarest → Sinaia</td><td>~12 €</td><td class="pago-lock">🔒 Anticipado</td></tr>
-    <tr><td>Tren Sinaia → Brașov</td><td>~5 €</td><td class="pago-lock">🔒 Anticipado</td></tr>
-    <tr><td>Tren Brașov → Cluj</td><td>~22 €</td><td class="pago-lock">🔒 Anticipado</td></tr>
-    <tr><td>Santuario de osos (tarifa domingo)</td><td>~17–20 €</td><td class="pago-lock">🔒 Anticipado</td></tr>
-    <tr><td>Minibús excursión dom 20</td><td>~25–35 €</td><td class="pago-sitio">💵 En sitio</td></tr>
-    <tr><td>Palacio del Parlamento</td><td>~10–15 €</td><td class="pago-sitio">💵 Taquilla</td></tr>
-    <tr><td>Castillo de Peleș</td><td>~15–20 €</td><td class="pago-sitio">💵 Taquilla</td></tr>
-    <tr><td>Castillo de Bran</td><td>~18 €</td><td class="pago-sitio">💵 Taquilla / online</td></tr>
-    <tr><td>Fortaleza de Râșnov</td><td>~7–10 €</td><td class="pago-sitio">💵 Taquilla</td></tr>
-    <tr class="sub"><td>Subtotal actividades</td><td>~130–165 €</td><td></td></tr>
-    <tr><td>Hotel Bucarest (1 noche, ½ doble)</td><td>~40–70 €</td><td>Cada quien</td></tr>
-    <tr><td>Hotel Sinaia (1 noche, ½ doble)</td><td>~35–65 €</td><td>Cada quien</td></tr>
-    <tr><td>Hotel Brașov (2 noches, ½ doble)</td><td>~70–170 €</td><td>Cada quien</td></tr>
-    <tr class="total"><td>TOTAL del tramo</td><td>~275–470 €</td><td>+ comidas y taxis</td></tr>
+    <tr><th>Concepto</th><th>EUR</th><th>RON</th><th>COP</th><th>Pago</th></tr>
+    <tr><td>Tren Bucarest → Brașov</td><td>~15–20 €</td><td>~79–105</td><td>~56.000–74.000</td><td class="pago-lock">🔒 Anticipado</td></tr>
+    <tr><td>Tren Brașov ↔ Sinaia (ida y vuelta)</td><td>~10 €</td><td>~52</td><td>~37.000</td><td class="pago-lock">🔒 Anticipado</td></tr>
+    <tr><td>Tren Brașov → Cluj</td><td>~22 €</td><td>~115</td><td>~81.000</td><td class="pago-lock">🔒 Anticipado</td></tr>
+    <tr><td>Santuario de osos (tarifa domingo)</td><td>~17–20 €</td><td>~89–105</td><td>~63.000–74.000</td><td class="pago-lock">🔒 Anticipado</td></tr>
+    <tr><td>Minibús excursión dom 20</td><td>~25–35 €</td><td>~131–183</td><td>~93.000–130.000</td><td class="pago-sitio">💵 En sitio</td></tr>
+    <tr><td>Palacio del Parlamento</td><td>~10–15 €</td><td>~52–79</td><td>~37.000–56.000</td><td class="pago-sitio">💵 Taquilla</td></tr>
+    <tr><td>Castillo de Peleș</td><td>~15–20 €</td><td>~79–105</td><td>~56.000–74.000</td><td class="pago-sitio">💵 Taquilla</td></tr>
+    <tr><td>Castillo de Bran</td><td>~18 €</td><td>~94</td><td>~67.000</td><td class="pago-sitio">💵 Taquilla</td></tr>
+    <tr><td>Fortaleza de Râșnov</td><td>~7–10 €</td><td>~37–52</td><td>~26.000–37.000</td><td class="pago-sitio">💵 Taquilla</td></tr>
+    <tr class="sub"><td>Subtotal actividades</td><td>~140–175 €</td><td>~730–915</td><td>~520.000–650.000</td><td></td></tr>
+    <tr><td>Hotel Bucarest (1 noche, ½ doble)</td><td>~48–85 €</td><td>~250–445</td><td>~180.000–315.000</td><td>Cada quien</td></tr>
+    <tr><td>Hotel Brașov (3 noches, ½ doble)</td><td>~128–263 €</td><td>~670–1.375</td><td>~475.000–975.000</td><td>Cada quien</td></tr>
+    <tr class="total"><td>Inversión por persona</td><td>~316–523 €</td><td>~1.650–2.740</td><td>~1.170.000–1.935.000</td><td>+ comidas y taxis</td></tr>
   </table>
 
   <div class="nota-ant">
-    <b>🔒 Lo anticipado (~55–60 € p/p)</b> lo paga el coordinador por adelantado —trenes y osos—. Todo lo demás lo paga cada quien en el sitio.
+    <b>🔒 Lo anticipado (~65–75 € · 340–390 RON · 240.000–280.000 COP p/p)</b> —trenes y osos— lo compra el coordinador. <b>Recaudo: 24 de agosto</b> · compra: 25–26 de agosto. Todo lo demás lo paga cada quien en el sitio.
   </div>
-  <p class="disclaimer">Todos los valores son estimados; esta página se irá actualizando con los precios reales.</p>
+  <p class="disclaimer">Todos los valores son estimados; esta página se irá actualizando con los precios reales. Cambio usado: 1 € ≈ 5,24 RON ≈ 3.700 COP.</p>
 </section>
 
 <!-- ======================= CTA ======================= -->
@@ -436,7 +451,6 @@
 <div class="credit">Transilvania 2026 · Brochure del grupo · Documento privado de coordinación de viaje · Precios estimados sujetos a cambio</div>
 
 <script>
-// Si una foto no carga, se reemplaza por un panel elegante con el nombre del lugar
 document.querySelectorAll('img').forEach(function(img){
   img.addEventListener('error', function(){
     var d=document.createElement('div');
